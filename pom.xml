@@ -12,7 +12,7 @@
 	<artifactId>grupo11</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>grupo11</name>
-	<description>Demo project for Spring Boot</description>
+	<description>PROYECTO CICLO03</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
