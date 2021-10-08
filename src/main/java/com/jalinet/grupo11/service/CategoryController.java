@@ -23,19 +23,22 @@ import org.springframework.web.bind.annotation.RestController;
  * @author JaliNet
  */
 @RestController
-@CrossOrigin(origins = "http://132.226.240.254/")
 @RequestMapping("/api/Category")
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
     
+    @CrossOrigin(origins = "http://132.226.240.254")
     @GetMapping("/all")
       public List<Category> getCategorys() {return categoryService.getAll();};
 
+    @CrossOrigin(origins = "http://132.226.240.254")
     @GetMapping("/{id}")
       public Optional<Category> getCategory(@PathVariable("id") int categoryId) {
           return categoryService.getCategory(categoryId);
       }
+
+    @CrossOrigin(origins = "http://132.226.240.254")
     @PostMapping("/save")
       public Category save(@RequestBody Category category) {return categoryService.save(category);};
       

@@ -22,20 +22,22 @@ import org.springframework.web.bind.annotation.RestController;
  * @author JaliNet
  */
 @RestController
-@CrossOrigin(origins = "http://132.226.240.254/")
 @RequestMapping("/api/Custome")
 public class CustomeController {
     @Autowired
     private CustomeService customeService;
     
+    @CrossOrigin(origins = "http://132.226.240.254")
     @GetMapping("/all")
       public List<Custome> getCustomes() {return customeService.getAll();};
 
+    @CrossOrigin(origins = "http://132.226.240.254")
     @GetMapping("/{id}")
       public Optional<Custome> getCustome(@PathVariable("id") int customeId) {
           return customeService.getCustome(customeId);
       }
-    @PostMapping("/save")
+      @CrossOrigin(origins = "http://132.226.240.254")
+      @PostMapping("/save")
       public Custome save(@RequestBody Custome custome) {return customeService.save(custome);};
       
    
